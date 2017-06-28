@@ -12,6 +12,8 @@
 		7EB081C71F03489C00D0EAEC /* ValueResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EB081C61F03489C00D0EAEC /* ValueResultViewController.swift */; };
 		7EB081CA1F036C7000D0EAEC /* AlertController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7EB081C91F036C7000D0EAEC /* AlertController.storyboard */; };
 		7EB081CC1F036CCD00D0EAEC /* AlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EB081CB1F036CCD00D0EAEC /* AlertViewController.swift */; };
+		7EB081CF1F0376F300D0EAEC /* ImagePicker.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7EB081CE1F0376F300D0EAEC /* ImagePicker.storyboard */; };
+		7EB081D11F0377CC00D0EAEC /* ImagePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EB081D01F0377CC00D0EAEC /* ImagePickerViewController.swift */; };
 		7EBCF1571F02292300D674A9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EBCF1561F02292300D674A9 /* AppDelegate.swift */; };
 		7EBCF1591F02292300D674A9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EBCF1581F02292300D674A9 /* ViewController.swift */; };
 		7EBCF15C1F02292300D674A9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7EBCF15A1F02292300D674A9 /* Main.storyboard */; };
@@ -31,6 +33,8 @@
 		7EB081C61F03489C00D0EAEC /* ValueResultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValueResultViewController.swift; sourceTree = "<group>"; };
 		7EB081C91F036C7000D0EAEC /* AlertController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AlertController.storyboard; sourceTree = "<group>"; };
 		7EB081CB1F036CCD00D0EAEC /* AlertViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertViewController.swift; sourceTree = "<group>"; };
+		7EB081CE1F0376F300D0EAEC /* ImagePicker.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ImagePicker.storyboard; sourceTree = "<group>"; };
+		7EB081D01F0377CC00D0EAEC /* ImagePickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagePickerViewController.swift; sourceTree = "<group>"; };
 		7EBCF1531F02292300D674A9 /* SwiftTutorial20170627.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftTutorial20170627.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7EBCF1561F02292300D674A9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7EBCF1581F02292300D674A9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -76,6 +80,15 @@
 			name = AlertController;
 			sourceTree = "<group>";
 		};
+		7EB081CD1F03768400D0EAEC /* ImagePickerController */ = {
+			isa = PBXGroup;
+			children = (
+				7EB081CE1F0376F300D0EAEC /* ImagePicker.storyboard */,
+				7EB081D01F0377CC00D0EAEC /* ImagePickerViewController.swift */,
+			);
+			name = ImagePickerController;
+			sourceTree = "<group>";
+		};
 		7EBCF14A1F02292300D674A9 = {
 			isa = PBXGroup;
 			children = (
@@ -95,6 +108,7 @@
 		7EBCF1551F02292300D674A9 /* SwiftTutorial20170627 */ = {
 			isa = PBXGroup;
 			children = (
+				7EB081CD1F03768400D0EAEC /* ImagePickerController */,
 				7EB081C81F036C4000D0EAEC /* AlertController */,
 				7EB081C11F033BFB00D0EAEC /* ViewChange2 */,
 				7EBCF16B1F02410E00D674A9 /* ViewChange1 */,
@@ -183,6 +197,7 @@
 			files = (
 				7EBCF1641F02292300D674A9 /* LaunchScreen.storyboard in Resources */,
 				7EB081CA1F036C7000D0EAEC /* AlertController.storyboard in Resources */,
+				7EB081CF1F0376F300D0EAEC /* ImagePicker.storyboard in Resources */,
 				7EBCF16D1F02415900D674A9 /* View.storyboard in Resources */,
 				7EBCF1611F02292300D674A9 /* Assets.xcassets in Resources */,
 				7EB081C31F033C2C00D0EAEC /* View2.storyboard in Resources */,
@@ -202,6 +217,7 @@
 				7EBCF16F1F0243C800D674A9 /* VT1ViewController.swift in Sources */,
 				7EB081CC1F036CCD00D0EAEC /* AlertViewController.swift in Sources */,
 				7EBCF15F1F02292300D674A9 /* SwiftTutorial20170627.xcdatamodeld in Sources */,
+				7EB081D11F0377CC00D0EAEC /* ImagePickerViewController.swift in Sources */,
 				7EB081C71F03489C00D0EAEC /* ValueResultViewController.swift in Sources */,
 				7EBCF1711F0248FB00D674A9 /* VT2ViewController.swift in Sources */,
 				7EBCF1591F02292300D674A9 /* ViewController.swift in Sources */,
