@@ -54,6 +54,7 @@ class ValueViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let rvc = segue.destination as? ValueResultViewController {
+            
             rvc.email = textFieldEmail.text!
             rvc.update = switchUpdate.isOn
             rvc.interval = stepperInterval.value
