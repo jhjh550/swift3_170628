@@ -71,4 +71,22 @@ class TableViewController: UITableViewController {
         
         print(dataList[indexPath.row].title)
         
-    }}
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let detailVC = segue.destination as! DetailViewController
+        let indexPath = self.tableView.indexPathForSelectedRow!
+        let row = dataList[indexPath.row]
+        detailVC.detailTitle = row.title
+        detailVC.detailDesc = row.desc
+        detailVC.detailPoint = row.point
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+}

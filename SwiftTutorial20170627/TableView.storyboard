@@ -64,6 +64,7 @@
                                     <outlet property="labelDesc" destination="alN-2t-8TR" id="NGX-6c-5rl"/>
                                     <outlet property="labelPoint" destination="tPt-hu-OY7" id="0EC-Ax-TGW"/>
                                     <outlet property="labelTitle" destination="BZU-pj-dsX" id="uw2-fv-bvy"/>
+                                    <segue destination="x48-gf-Rvt" kind="show" id="UAc-eN-oEy"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -78,10 +79,10 @@
             </objects>
             <point key="canvasLocation" x="679.20000000000005" y="-17.541229385307346"/>
         </scene>
-        <!--View Controller-->
+        <!--Detail View Controller-->
         <scene sceneID="oI3-kT-2q0">
             <objects>
-                <viewController id="x48-gf-Rvt" sceneMemberID="viewController">
+                <viewController id="x48-gf-Rvt" customClass="DetailViewController" customModule="SwiftTutorial20170627" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Uxx-U6-9VC"/>
                         <viewControllerLayoutGuide type="bottom" id="FHU-Qz-ccc"/>
@@ -90,30 +91,40 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f0c-3V-7lB">
-                                <rect key="frame" x="200" y="116" width="42" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f0c-3V-7lB">
+                                <rect key="frame" x="166.5" y="81" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WTf-Q8-oGY">
-                                <rect key="frame" x="200" y="195" width="42" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WTf-Q8-oGY">
+                                <rect key="frame" x="166.5" y="202" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2OR-Ex-ona">
-                                <rect key="frame" x="200" y="278" width="42" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2OR-Ex-ona">
+                                <rect key="frame" x="166.5" y="323" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="2OR-Ex-ona" firstAttribute="centerX" secondItem="rKD-VB-52h" secondAttribute="centerX" id="5fp-0N-k5h"/>
+                            <constraint firstItem="2OR-Ex-ona" firstAttribute="centerY" secondItem="rKD-VB-52h" secondAttribute="centerY" id="CxV-67-lfh"/>
+                            <constraint firstItem="WTf-Q8-oGY" firstAttribute="top" secondItem="f0c-3V-7lB" secondAttribute="bottom" constant="100" id="Ld7-8S-npW"/>
+                            <constraint firstItem="2OR-Ex-ona" firstAttribute="top" secondItem="WTf-Q8-oGY" secondAttribute="bottom" constant="100" id="PC3-E5-ulx"/>
+                            <constraint firstItem="WTf-Q8-oGY" firstAttribute="centerX" secondItem="rKD-VB-52h" secondAttribute="centerX" id="h5L-WF-u7a"/>
+                            <constraint firstItem="f0c-3V-7lB" firstAttribute="centerX" secondItem="rKD-VB-52h" secondAttribute="centerX" id="vfS-N9-kGM"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="descLabel" destination="WTf-Q8-oGY" id="bFA-HE-uS1"/>
+                        <outlet property="pointLabel" destination="2OR-Ex-ona" id="9U4-uF-BDN"/>
+                        <outlet property="titleLabel" destination="f0c-3V-7lB" id="Khb-Mz-rr9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UvF-75-FJr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
