@@ -11,8 +11,23 @@ import AVFoundation
 
 class AVPlayerViewController: UIViewController {
 
-    var audioPlayer:AVAudioPlayer!
+    var avPlayer:AVPlayer!
+    @IBAction func onStop2Click(_ sender: Any) {
+        if avPlayer != nil {
+            avPlayer.pause()
+            avPlayer = nil
+        }
+    }
+    @IBAction func onPlay2Click(_ sender: Any) {
+        let address = "http://www.mfiles.co.uk/mp3-downloads/Toccata-and-Fugue-Dm.mp3"
+        let url = URL(string: address)
+        let playerItem = AVPlayerItem(url: url!)
+        avPlayer = AVPlayer(playerItem: playerItem)
+        
+        avPlayer.play()
+    }
     
+    var audioPlayer:AVAudioPlayer!
     @IBAction func onStopClick(_ sender: Any) {
         if audioPlayer != nil {
             audioPlayer.stop()

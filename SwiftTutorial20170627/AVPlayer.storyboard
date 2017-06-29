@@ -37,6 +37,22 @@
                                     <action selector="onStopClick:" destination="IJ9-gx-vdI" eventType="touchUpInside" id="6ua-8W-mvh"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f1l-fb-p9U">
+                                <rect key="frame" x="73" y="318" width="37" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="play2"/>
+                                <connections>
+                                    <action selector="onPlay2Click:" destination="IJ9-gx-vdI" eventType="touchUpInside" id="u3y-lp-6lL"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b0y-ir-Yfg">
+                                <rect key="frame" x="197" y="318" width="40" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="stop2"/>
+                                <connections>
+                                    <action selector="onStop2Click:" destination="IJ9-gx-vdI" eventType="touchUpInside" id="eGE-ng-E3T"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
