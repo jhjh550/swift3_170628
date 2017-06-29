@@ -11,7 +11,20 @@ import UIKit
 class XmlViewController: UIViewController, XMLParserDelegate {
 
     var parser:XMLParser!
-    var bRead = false
+    
+    class PizzaData{
+        var name:String = ""
+        var cost:Int = 0
+        var desc:String = ""
+    }
+    
+    var pizza = PizzaData()
+    var dataList = [PizzaData]()
+    var bName = false
+    var bCost = false
+    var bDesc = false
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,23 +34,42 @@ class XmlViewController: UIViewController, XMLParserDelegate {
         parser = XMLParser(contentsOf: url!)
         parser.delegate = self
         parser.parse()
+        
+        for data in dataList{
+            print(data)
+        }
     }
     
     func parser(_ parser: XMLParser, didStartElement elementName: String, namespaceURI: String?, qualifiedName qName: String?, attributes attributeDict: [String : String] = [:]) {
         
-        if elementName == "name"{
-            bRead = true
+        switch elementName {
+            case "item":
+                pizza = PizzaData()
+                dataList.append(pizza)
+            case "name":
+                bName = true
+            case "cost":
+                bCost = true
+            case "description":
+                bDesc = true
+            default:
+                break
         }
+        
     }
     
     func parser(_ parser: XMLParser, foundCharacters string: String) {
-        if bRead {
-            print(string)
-            bRead = false
+        if(bName){
+            pizza.name = string
+            bName = false
+        }else if(bCost){
+            pizza.cost = Int(string)!
+            bCost = false
+        }else if(bDesc){
+            pizza.desc = string
+            bDesc = false
         }
     }
-
-
 }
 
 
