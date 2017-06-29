@@ -14,6 +14,8 @@
 		7E14A4831F04BD01006E1F6E /* AVPlayer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E14A4821F04BD01006E1F6E /* AVPlayer.storyboard */; };
 		7E14A4851F04BD9F006E1F6E /* AVPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E14A4841F04BD9F006E1F6E /* AVPlayerViewController.swift */; };
 		7E14A4871F04C18D006E1F6E /* music.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7E14A4861F04C18D006E1F6E /* music.mp3 */; };
+		7E14A48A1F04CD9C006E1F6E /* XML.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E14A4891F04CD9C006E1F6E /* XML.storyboard */; };
+		7E14A48C1F04CE3D006E1F6E /* XmlViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E14A48B1F04CE3D006E1F6E /* XmlViewController.swift */; };
 		7EB081C31F033C2C00D0EAEC /* View2.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7EB081C21F033C2C00D0EAEC /* View2.storyboard */; };
 		7EB081C51F03447000D0EAEC /* ValueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EB081C41F03447000D0EAEC /* ValueViewController.swift */; };
 		7EB081C71F03489C00D0EAEC /* ValueResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EB081C61F03489C00D0EAEC /* ValueResultViewController.swift */; };
@@ -46,6 +48,8 @@
 		7E14A4821F04BD01006E1F6E /* AVPlayer.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AVPlayer.storyboard; sourceTree = "<group>"; };
 		7E14A4841F04BD9F006E1F6E /* AVPlayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AVPlayerViewController.swift; sourceTree = "<group>"; };
 		7E14A4861F04C18D006E1F6E /* music.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = music.mp3; sourceTree = "<group>"; };
+		7E14A4891F04CD9C006E1F6E /* XML.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = XML.storyboard; sourceTree = "<group>"; };
+		7E14A48B1F04CE3D006E1F6E /* XmlViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XmlViewController.swift; sourceTree = "<group>"; };
 		7EB081C21F033C2C00D0EAEC /* View2.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = View2.storyboard; sourceTree = "<group>"; };
 		7EB081C41F03447000D0EAEC /* ValueViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValueViewController.swift; sourceTree = "<group>"; };
 		7EB081C61F03489C00D0EAEC /* ValueResultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValueResultViewController.swift; sourceTree = "<group>"; };
@@ -110,6 +114,15 @@
 			name = AVPlayer;
 			sourceTree = "<group>";
 		};
+		7E14A4881F04CD79006E1F6E /* xmlparsing */ = {
+			isa = PBXGroup;
+			children = (
+				7E14A4891F04CD9C006E1F6E /* XML.storyboard */,
+				7E14A48B1F04CE3D006E1F6E /* XmlViewController.swift */,
+			);
+			name = xmlparsing;
+			sourceTree = "<group>";
+		};
 		7EB081C11F033BFB00D0EAEC /* ViewChange2 */ = {
 			isa = PBXGroup;
 			children = (
@@ -169,6 +182,7 @@
 		7EBCF1551F02292300D674A9 /* SwiftTutorial20170627 */ = {
 			isa = PBXGroup;
 			children = (
+				7E14A4881F04CD79006E1F6E /* xmlparsing */,
 				7E14A4811F04BCAD006E1F6E /* AVPlayer */,
 				7E14A47C1F049F11006E1F6E /* Tabbar */,
 				7E14A4761F04877E006E1F6E /* AutoLayout */,
@@ -272,6 +286,7 @@
 				7EB081C31F033C2C00D0EAEC /* View2.storyboard in Resources */,
 				7EB081D51F0391D600D0EAEC /* TableView.storyboard in Resources */,
 				7E14A4831F04BD01006E1F6E /* AVPlayer.storyboard in Resources */,
+				7E14A48A1F04CD9C006E1F6E /* XML.storyboard in Resources */,
 				7EBCF15C1F02292300D674A9 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -298,6 +313,7 @@
 				7EBCF1591F02292300D674A9 /* ViewController.swift in Sources */,
 				7E14A4801F04A2E7006E1F6E /* DetailViewController.swift in Sources */,
 				7EBCF1571F02292300D674A9 /* AppDelegate.swift in Sources */,
+				7E14A48C1F04CE3D006E1F6E /* XmlViewController.swift in Sources */,
 				7EBCF1751F025B4B00D674A9 /* VT4ViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
