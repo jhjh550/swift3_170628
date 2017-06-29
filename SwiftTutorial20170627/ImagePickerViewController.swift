@@ -12,7 +12,7 @@ class ImagePickerViewController: UIViewController, UIImagePickerControllerDelega
 
     @IBOutlet var imgView: UIImageView!
     
-    @IBAction func pick(_ sender: Any) {
+    @IBAction func pick(_ sender: UIButton) {
         let picker = UIImagePickerController()
         picker.sourceType = .photoLibrary
         picker.allowsEditing = true
