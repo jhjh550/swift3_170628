@@ -38,6 +38,45 @@ class CoreDataViewController: UIViewController {
     }
     
     
+    @IBAction func findContact(_ sender: Any) {
+        getContact()
+    }
+    
+    @IBAction func deleteContact(_ sender: Any) {
+        if let deleteObj = getContact() {
+            context.delete(deleteObj)
+        }
+    }
+    
+    func getContact()->Contacts?{
+        let entity = NSEntityDescription.entity(forEntityName: "Contacts", in: context)
+        
+        let request:NSFetchRequest<Contacts> = Contacts.fetchRequest()
+        
+        request.entity = entity
+        request.predicate  = NSPredicate(format: "(name = %@)", nameTextField.text!)
+        
+        do{
+            var results = try context.fetch(request)
+            if results.count > 0 {
+                let match = results[0]
+                
+                print("name : \(match.name!)")
+                print("address : \(match.address!)")
+                print("phone : \(match.phone!)")
+                statusLabel.text = "Matches Found \(results.count)"
+                
+                return match
+            }else{
+                statusLabel.text = "No Match"
+            }
+        }catch{
+            print(error.localizedDescription)
+        }
+        
+        return nil
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
