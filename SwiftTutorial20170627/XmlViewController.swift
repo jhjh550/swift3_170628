@@ -36,7 +36,7 @@ class XmlViewController: UIViewController, XMLParserDelegate {
         parser.parse()
         
         for data in dataList{
-            print(data)
+            print(data.desc)
         }
     }
     
