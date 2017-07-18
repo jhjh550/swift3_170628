@@ -70,6 +70,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iA3-U2-oCD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="UNq-wu-auE"/>
             </objects>
             <point key="canvasLocation" x="-141.25" y="26.25"/>
         </scene>
