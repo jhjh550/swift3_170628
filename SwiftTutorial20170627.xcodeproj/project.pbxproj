@@ -25,6 +25,10 @@
 		7E2339B21F05E5C6009E41EB /* CoreDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E2339B11F05E5C6009E41EB /* CoreDataViewController.swift */; };
 		7E2339B51F061220009E41EB /* Map.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E2339B41F061220009E41EB /* Map.storyboard */; };
 		7E2339B81F0612B0009E41EB /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E2339B71F0612B0009E41EB /* MapViewController.swift */; };
+		7E5027DC1F1E5F2100C63E28 /* Podcast.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E5027D81F1E5F2100C63E28 /* Podcast.storyboard */; };
+		7E5027DD1F1E5F2100C63E28 /* PodcastPlayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5027D91F1E5F2100C63E28 /* PodcastPlayViewController.swift */; };
+		7E5027DE1F1E5F2100C63E28 /* PodcastTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5027DA1F1E5F2100C63E28 /* PodcastTableViewController.swift */; };
+		7E5027DF1F1E5F2100C63E28 /* PodData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5027DB1F1E5F2100C63E28 /* PodData.swift */; };
 		7E999DF81F1DA2290066A9E7 /* VideoPlayer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E999DF71F1DA2290066A9E7 /* VideoPlayer.storyboard */; };
 		7E999DFA1F1DA2ED0066A9E7 /* VideoPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E999DF91F1DA2ED0066A9E7 /* VideoPlayerViewController.swift */; };
 		7EB081C31F033C2C00D0EAEC /* View2.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7EB081C21F033C2C00D0EAEC /* View2.storyboard */; };
@@ -73,6 +77,10 @@
 		7E2339B11F05E5C6009E41EB /* CoreDataViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataViewController.swift; sourceTree = "<group>"; };
 		7E2339B41F061220009E41EB /* Map.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Map.storyboard; sourceTree = "<group>"; };
 		7E2339B71F0612B0009E41EB /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		7E5027D81F1E5F2100C63E28 /* Podcast.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Podcast.storyboard; sourceTree = "<group>"; };
+		7E5027D91F1E5F2100C63E28 /* PodcastPlayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PodcastPlayViewController.swift; sourceTree = "<group>"; };
+		7E5027DA1F1E5F2100C63E28 /* PodcastTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PodcastTableViewController.swift; sourceTree = "<group>"; };
+		7E5027DB1F1E5F2100C63E28 /* PodData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PodData.swift; sourceTree = "<group>"; };
 		7E999DF71F1DA2290066A9E7 /* VideoPlayer.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = VideoPlayer.storyboard; sourceTree = "<group>"; };
 		7E999DF91F1DA2ED0066A9E7 /* VideoPlayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoPlayerViewController.swift; sourceTree = "<group>"; };
 		7EB081C21F033C2C00D0EAEC /* View2.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = View2.storyboard; sourceTree = "<group>"; };
@@ -188,6 +196,17 @@
 			name = Map;
 			sourceTree = "<group>";
 		};
+		7E5027D71F1E5EFF00C63E28 /* podcast */ = {
+			isa = PBXGroup;
+			children = (
+				7E5027D81F1E5F2100C63E28 /* Podcast.storyboard */,
+				7E5027D91F1E5F2100C63E28 /* PodcastPlayViewController.swift */,
+				7E5027DA1F1E5F2100C63E28 /* PodcastTableViewController.swift */,
+				7E5027DB1F1E5F2100C63E28 /* PodData.swift */,
+			);
+			name = podcast;
+			sourceTree = "<group>";
+		};
 		7E999DF61F1DA2120066A9E7 /* VideoPlayer */ = {
 			isa = PBXGroup;
 			children = (
@@ -258,6 +277,7 @@
 		7EBCF1551F02292300D674A9 /* SwiftTutorial20170627 */ = {
 			isa = PBXGroup;
 			children = (
+				7E5027D71F1E5EFF00C63E28 /* podcast */,
 				7E999DF61F1DA2120066A9E7 /* VideoPlayer */,
 				7E2339B31F061210009E41EB /* Map */,
 				7E2339AE1F05E494009E41EB /* CoreData */,
@@ -377,6 +397,7 @@
 				7EB081D91F03A1DD00D0EAEC /* home-icon.png in Resources */,
 				7E14A4871F04C18D006E1F6E /* music.mp3 in Resources */,
 				7EBCF1611F02292300D674A9 /* Assets.xcassets in Resources */,
+				7E5027DC1F1E5F2100C63E28 /* Podcast.storyboard in Resources */,
 				7E14A4911F04FA0D006E1F6E /* Weather.storyboard in Resources */,
 				7E2339B51F061220009E41EB /* Map.storyboard in Resources */,
 				7E14A47E1F049F1F006E1F6E /* Tabbar.storyboard in Resources */,
@@ -448,6 +469,7 @@
 				7EBCF1731F02520000D674A9 /* VT3ViewController.swift in Sources */,
 				7E2339B21F05E5C6009E41EB /* CoreDataViewController.swift in Sources */,
 				7EBCF16F1F0243C800D674A9 /* VT1ViewController.swift in Sources */,
+				7E5027DD1F1E5F2100C63E28 /* PodcastPlayViewController.swift in Sources */,
 				7EB081CC1F036CCD00D0EAEC /* AlertViewController.swift in Sources */,
 				7E14A4951F04FE2D006E1F6E /* WeatherTableViewCell.swift in Sources */,
 				7EBCF15F1F02292300D674A9 /* SwiftTutorial20170627.xcdatamodeld in Sources */,
@@ -460,12 +482,14 @@
 				7E14A4931F04FA68006E1F6E /* WeatherTableViewController.swift in Sources */,
 				7E14A4851F04BD9F006E1F6E /* AVPlayerViewController.swift in Sources */,
 				7EBCF1711F0248FB00D674A9 /* VT2ViewController.swift in Sources */,
+				7E5027DE1F1E5F2100C63E28 /* PodcastTableViewController.swift in Sources */,
 				7EBCF1591F02292300D674A9 /* ViewController.swift in Sources */,
 				7E14A4801F04A2E7006E1F6E /* DetailViewController.swift in Sources */,
 				7EBCF1571F02292300D674A9 /* AppDelegate.swift in Sources */,
 				7E14A48C1F04CE3D006E1F6E /* XmlViewController.swift in Sources */,
 				7E2339AC1F05DD57009E41EB /* WeatherDetailViewController.swift in Sources */,
 				7EBCF1751F025B4B00D674A9 /* VT4ViewController.swift in Sources */,
+				7E5027DF1F1E5F2100C63E28 /* PodData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
