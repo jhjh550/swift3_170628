@@ -39,7 +39,7 @@ class CoreDataViewController: UIViewController {
     
     
     @IBAction func findContact(_ sender: Any) {
-        getContact()
+        getContact()   
     }
     
     @IBAction func deleteContact(_ sender: Any) {
