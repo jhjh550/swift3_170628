@@ -72,7 +72,9 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         super.viewDidLoad()
 
         locationManger.delegate = self
+        print(CLLocationManager.authorizationStatus() == .authorizedWhenInUse)
         locationManger.requestWhenInUseAuthorization()
+        
         locationManger.desiredAccuracy = kCLLocationAccuracyBest
         locationManger.startUpdatingLocation()
         mapView.delegate = self
@@ -81,6 +83,7 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         
     }
     
+    //https://developer.apple.com/documentation/corelocation/requesting_permission_to_use_location_services
     func testGeoCoder(){
         let geoCoder = CLGeocoder()
         let newLocation = CLLocation(latitude: 40.7485, longitude: -73.984911)
