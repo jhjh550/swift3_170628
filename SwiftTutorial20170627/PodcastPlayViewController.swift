@@ -79,7 +79,7 @@ class PodcastPlayViewController: UIViewController {
         return nil
     }
 
-    func updateSlider(){
+    @objc func updateSlider(){
         if player != nil {
             if let duration = player.currentItem?.duration {
                 let totalSeconds = Float(CMTimeGetSeconds(duration))

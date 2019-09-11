@@ -55,7 +55,6 @@ class XmlViewController: UIViewController, XMLParserDelegate {
             default:
                 break
         }
-        
     }
     
     func parser(_ parser: XMLParser, foundCharacters string: String) {

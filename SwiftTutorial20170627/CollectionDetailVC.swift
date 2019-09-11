@@ -35,7 +35,7 @@ class CollectionDetailVC: UIViewController {
                 let url = contentInput?.fullSizeImageURL
                 let orientation = contentInput?.fullSizeImageOrientation
                 var inputImg = CIImage(contentsOf: url!, options:nil)
-                inputImg = inputImg?.applyingOrientation(orientation!)
+                inputImg = inputImg?.oriented(forExifOrientation: orientation!)
                 
                 let filter = CIFilter(name: filterName)
                 filter?.setDefaults()
@@ -47,10 +47,9 @@ class CollectionDetailVC: UIViewController {
                 let uiImage = UIImage(cgImage: image!)
                 
                 let contentOutput = PHContentEditingOutput(contentEditingInput: contentInput!)
-                
-                let renderedData = UIImageJPEGRepresentation(uiImage, 0.9)
-                
-                if (try? renderedData?.write(to: contentOutput.renderedContentURL, options: [.atomic]) != nil) != nil {
+                let renderedData = uiImage.jpegData(compressionQuality: 0.9)
+            
+                if (try? renderedData?.write(to: contentOutput.renderedContentURL) != nil) != nil {
                     let archivedData = NSKeyedArchiver.archivedData(withRootObject: filterName)
                     let adjData = PHAdjustmentData(formatIdentifier: "com.gbustudio.photo", formatVersion: "1.0", data: archivedData)
                     contentOutput.adjustmentData = adjData

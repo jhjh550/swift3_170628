@@ -19,11 +19,10 @@ class ImagePickerViewController: UIViewController, UIImagePickerControllerDelega
         picker.delegate = self
         present(picker, animated: false, completion: nil)
     }
+
     
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
-        picker.dismiss(animated: false, completion: nil)
-        self.imgView.image = info[UIImagePickerControllerOriginalImage] as? UIImage
-        
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        self.imgView.image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage
     }
     
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {

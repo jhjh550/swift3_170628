@@ -25,11 +25,11 @@ class AlertViewController: UIViewController {
             textField.isSecureTextEntry = true
         })
         
-//        let action2 = UIAlertAction(title: "action2", style: .default, handler: nil)
-//        alert.addAction(action2)
-//        
-//        let action3 = UIAlertAction(title: "action3", style: .destructive, handler: nil)
-//        alert.addAction(action3)
+        let action2 = UIAlertAction(title: "action2", style: .default, handler: nil)
+        alert.addAction(action2)
+        
+        let action3 = UIAlertAction(title: "action3", style: .destructive, handler: nil)
+        alert.addAction(action3)
         
         present(alert, animated: true, completion: nil)
     }

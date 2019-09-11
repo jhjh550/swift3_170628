@@ -19,7 +19,7 @@ class AVPlayerViewController: UIViewController {
         }
     }
     @IBAction func onPlay2Click(_ sender: Any) {
-        let address = "http://www.mfiles.co.uk/mp3-downloads/Toccata-and-Fugue-Dm.mp3"
+        let address = "http://www.hochmuth.com/mp3/Beethoven_12_Variation.mp3"
         let url = URL(string: address)
         let playerItem = AVPlayerItem(url: url!)
         avPlayer = AVPlayer(playerItem: playerItem)

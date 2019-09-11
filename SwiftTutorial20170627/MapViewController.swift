@@ -21,14 +21,15 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         mapView.removeAnnotations(mapView.annotations)
         matchingItems.removeAll()
         
-        let request = MKLocalSearchRequest()
+        //let request = MKLocalSearchRequest()
+        let request = MKLocalSearch.Request()
         request.naturalLanguageQuery = searchTextField.text!
         request.region = mapView.region
         
         let search = MKLocalSearch(request: request)
         search.start { (response, error) in
             if error != nil{
-                print("Error : \(error?.localizedDescription)")
+                print("Error : \(error!.localizedDescription)")
             }else{
                 for item in response!.mapItems{
                     print("name : \(item.name) phone : \(item.phoneNumber)")
@@ -48,7 +49,7 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
     @IBAction func zoomIn(_ sender: Any) {
         let userLocation = mapView.userLocation
         
-        let region = MKCoordinateRegionMakeWithDistance(userLocation.location!.coordinate, 2000, 2000)
+        let region = MKCoordinateRegion(center: userLocation.location!.coordinate, latitudinalMeters: 2000, longitudinalMeters: 2000)
         mapView.setRegion(region, animated: true)
     }
     
@@ -60,8 +61,15 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         }
     }
     
+    
+    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
+        if status == .authorizedWhenInUse{
+            locationManger.requestLocation()
+        }
+    }
+    
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        //
+        
     }
     
     func mapView(_ mapView: MKMapView, didUpdate userLocation: MKUserLocation) {
@@ -90,7 +98,7 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         
         geoCoder.reverseGeocodeLocation(newLocation) { (placemarks, error) in
             if error != nil {
-                print("GeoCoder failed : \(error?.localizedDescription)")
+                print("GeoCoder failed : \(error!.localizedDescription)")
             }else{
                 if placemarks!.count > 0 {
                     let placemark = placemarks![0]
@@ -114,6 +122,10 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+        print(error.localizedDescription)
     }
     
 

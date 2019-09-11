@@ -11,10 +11,20 @@ import Alamofire
 
 class AlamofireViewController: UIViewController {
 
+    struct Country:Decodable{
+        let name:String
+        let capital:String
+        let region:String
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
         
+        jsonParsing()
+        
+        
+
         Alamofire.request("https://httpbin.org/get").responseJSON { response in
             print("Request: \(String(describing: response.request))")   // original url request
             print("Response: \(String(describing: response.response))") // http url response
@@ -29,5 +39,22 @@ class AlamofireViewController: UIViewController {
             }
         }
     }
+    
+    func jsonParsing(){
+        let address = "https://restcountries.eu/rest/v2/all"
+        let url = URL(string: address)
+        URLSession.shared.dataTask(with: url!) { (data, response, error) in
+            do{
+                let coutries = try JSONDecoder().decode([Country].self, from: data!)
+                
+                for country in coutries{
+                    print(country.name+" : "+country.capital)
+                }
+            }catch {
+                print(error.localizedDescription)
+            }
+            }.resume()
+    }
 
-   }
+    
+}
